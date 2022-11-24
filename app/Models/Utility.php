@@ -53,14 +53,14 @@ class Utility extends Model
             "header_text" => "",
             "color"=>'#6fd943',
         ];
-        
+
         foreach($data as $row)
-        {   
-        
+        {
+
             $settings[$row->name] = $row->value;
-           
+
         }
-        
+
         return $settings;
     }
 
@@ -147,25 +147,25 @@ class Utility extends Model
             "wasabi_root" => "",
             "wasabi_max_upload_size" => "",
             "wasabi_storage_validation" => "",
-           
+
         ];
-        
+
         foreach($data as $row)
-        {   
+        {
             $settings[$row->name] = $row->value;
         }
-        
-        return $settings;
-    }  
 
-    public static function colorset(){  
+        return $settings;
+    }
+
+    public static function colorset(){
         if(\Auth::user())
         {
             if(\Auth::user()->type == 'admin')
             {
-                
-                $user = \Auth::user();  
-                
+
+                $user = \Auth::user();
+
                 $setting = DB::table('settings')->where('created_by',$user->id)->pluck('value','name')->toArray();
                 // dd($setting);
             }
@@ -175,17 +175,17 @@ class Utility extends Model
                 // dd($setting);
             }
         }
-        else
-        {
-            $user = User::where('type','admin')->first();
-            $setting = DB::table('settings')->where('created_by',$user->id)->pluck('value','name')->toArray();
-        }
+//        else
+//        {
+//            $user = User::where('type','admin')->first();
+//            $setting = DB::table('settings')->where('created_by',$user->id)->pluck('value','name')->toArray();
+//        }
         if(!isset($setting['color']))
         {
-            $setting = Utility::settings(); 
+            $setting = Utility::settings();
             // dd($setting);
         }
-        return $setting; 
+        return $setting;
 
         // dd($setting);
     }
@@ -464,7 +464,7 @@ class Utility extends Model
         {
             return '';
         }
-    }   
+    }
 
     // contract number formate
     public static function contractNumberFormat($number)
@@ -565,7 +565,7 @@ class Utility extends Model
         if($usr->type != 'admin')
         {
             // find template is exist or not in our record
-            $template = EmailTemplate::where('name', 'LIKE', $emailTemplate)->first(); 
+            $template = EmailTemplate::where('name', 'LIKE', $emailTemplate)->first();
 
             // dd($template);
 
@@ -593,8 +593,8 @@ class Utility extends Model
                     {
                         $content->content = self::replaceVariable($content->content, $obj);
 
-                          
-                        $settings=Utility::settings();   
+
+                        $settings=Utility::settings();
                         // send email
                         try
                         {
@@ -960,7 +960,7 @@ class Utility extends Model
 
         return $settings;
     }
-    
+
     public static function second_to_time($seconds = 0)
     {
         $H = floor($seconds / 3600);
@@ -1008,23 +1008,23 @@ class Utility extends Model
         return $json;
     }
 
-    public static function send_slack_msg($msg) 
+    public static function send_slack_msg($msg)
     {
-       
+
         $settings  = Utility::settings(Auth::user()->id);
-       
+
         if(isset($settings['slack_webhook']) && !empty($settings['slack_webhook'])){
             $ch = curl_init();
-    
+
             curl_setopt($ch, CURLOPT_URL, $settings['slack_webhook']);
             curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
             curl_setopt($ch, CURLOPT_POST, 1);
             curl_setopt($ch, CURLOPT_POSTFIELDS, json_encode(['text' => $msg]));
-        
+
             $headers = array();
             $headers[] = 'Content-Type: application/json';
             curl_setopt($ch, CURLOPT_HTTPHEADER, $headers);
-        
+
             $result = curl_exec($ch);
             if (curl_errno($ch)) {
                 echo 'Error:' . curl_error($ch);
@@ -1032,13 +1032,13 @@ class Utility extends Model
             curl_close($ch);
         }
 
-       
+
     }
 
-    public static function send_telegram_msg($resp) 
+    public static function send_telegram_msg($resp)
     {
         $settings  = Utility::settings(Auth::user()->id);
-        
+
         $msg = $resp;
         // Set your Bot ID and Chat ID.
         $telegrambot    = $settings['telegram_accestoken'];
@@ -1062,18 +1062,18 @@ class Utility extends Model
     }
 
 
-    
+
     ///===========================Storage Setting===========================================================================================////
 
      public static function upload_file($request,$key_name,$name,$path,$custom_validation =[])
      {
         try{
             $settings = Utility::settingsById();
-       
+
             if(!empty($settings['storage_setting'])){
-               
+
                 if($settings['storage_setting'] == 'wasabi'){
-                    
+
                     config(
                         [
                             'filesystems.disks.wasabi.key' => $settings['wasabi_key'],
@@ -1083,7 +1083,7 @@ class Utility extends Model
                             'filesystems.disks.wasabi.endpoint' => 'https://s3.'.$settings['wasabi_region'].'.wasabisys.com'
                         ]
                     );
-                    
+
                     $max_size = !empty($settings['wasabi_max_upload_size'])? $settings['wasabi_max_upload_size']:'2048';
                     $mimes =  !empty($settings['wasabi_storage_validation'])? $settings['wasabi_storage_validation']:'';
 
@@ -1099,27 +1099,27 @@ class Utility extends Model
                     );
                     $max_size = !empty($settings['s3_max_upload_size'])? $settings['s3_max_upload_size']:'2048';
                     $mimes =  !empty($settings['s3_storage_validation'])? $settings['s3_storage_validation']:'';
-                  
+
 
                 }else{
                     $max_size = !empty($settings['local_storage_max_upload_size'])? $settings['local_storage_max_upload_size']:'2048';
-                    
+
                     $mimes =  !empty($settings['local_storage_validation'])? $settings['local_storage_validation']:'';
                 }
 
-                
+
                 $file = $request->$key_name;
-                
-               
+
+
                 if(count($custom_validation) > 0){
                     $validation =$custom_validation;
                 }else{
-                    
+
                     $validation =[
                         'mimes:'.$mimes,
                         'max:'.$max_size,
                     ];
-                   
+
                 }
                 $validator = \Validator::make($request->all(), [
                     $key_name =>$validation
@@ -1134,28 +1134,28 @@ class Utility extends Model
                 } else {
 
                     $name = $name;
-                   
+
                     if($settings['storage_setting']=='local'){
 
-                       
-                      
+
+
                            $request->$key_name->move(storage_path($path), $name);
                            $path = $path.$name;
-                    
+
 
 
                     }else if($settings['storage_setting'] == 'wasabi'){
-                        
+
                         $path = \Storage::disk('wasabi')->putFileAs(
                             $path,
                             $file,
                             $name
                         );
-                        
+
                         // $path = $path.$name;
 
                     }else if($settings['storage_setting'] == 's3'){
-                        
+
                         $path = \Storage::disk('s3')->putFileAs(
                             $path,
                             $file,
@@ -1164,8 +1164,8 @@ class Utility extends Model
                         // $path = $path.$name;
                         // dd($path);
                     }
-                  
-                 
+
+
                     $res = [
                         'flag' => 1,
                         'msg'  =>'success',
@@ -1181,7 +1181,7 @@ class Utility extends Model
                 ];
                 return $res;
             }
-        
+
         }catch(\Exception $e){
             $res = [
                 'flag' => 0,
@@ -1190,12 +1190,12 @@ class Utility extends Model
             return $res;
         }
     }
-     
+
 
     public static function get_file($path)
     {
         $settings = Utility::settingsById();
-        
+
         try {
             if($settings['storage_setting'] == 'wasabi'){
                 config(
@@ -1218,7 +1218,7 @@ class Utility extends Model
                     ]
                 );
             }
-            
+
             return \Storage::disk($settings['storage_setting'])->url($path);
         } catch (\Throwable $th) {
             return '';

@@ -234,16 +234,16 @@
         },
         {
             "name": "aws/aws-sdk-php",
-            "version": "3.247.0",
+            "version": "3.247.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/aws/aws-sdk-php.git",
-                "reference": "2cd51e75e753dfe1f1677bb0a2e13a9ce70cba26"
+                "reference": "00542e760d8464e0ee635f916841fdfbd1ceb95c"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/aws/aws-sdk-php/zipball/2cd51e75e753dfe1f1677bb0a2e13a9ce70cba26",
-                "reference": "2cd51e75e753dfe1f1677bb0a2e13a9ce70cba26",
+                "url": "https://api.github.com/repos/aws/aws-sdk-php/zipball/00542e760d8464e0ee635f916841fdfbd1ceb95c",
+                "reference": "00542e760d8464e0ee635f916841fdfbd1ceb95c",
                 "shasum": ""
             },
             "require": {
@@ -322,9 +322,9 @@
             "support": {
                 "forum": "https://forums.aws.amazon.com/forum.jspa?forumID=80",
                 "issues": "https://github.com/aws/aws-sdk-php/issues",
-                "source": "https://github.com/aws/aws-sdk-php/tree/3.247.0"
+                "source": "https://github.com/aws/aws-sdk-php/tree/3.247.2"
             },
-            "time": "2022-11-21T21:31:13+00:00"
+            "time": "2022-11-23T19:35:36+00:00"
         },
         {
             "name": "brick/math",
@@ -3458,16 +3458,16 @@
         },
         {
             "name": "mercadopago/dx-php",
-            "version": "2.5.1",
+            "version": "2.5.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/mercadopago/sdk-php.git",
-                "reference": "9fd5d8842988cdad026a5722696d0784625201ea"
+                "reference": "f8048b9450da0d68015f8174459dd6f317df9f56"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/mercadopago/sdk-php/zipball/9fd5d8842988cdad026a5722696d0784625201ea",
-                "reference": "9fd5d8842988cdad026a5722696d0784625201ea",
+                "url": "https://api.github.com/repos/mercadopago/sdk-php/zipball/f8048b9450da0d68015f8174459dd6f317df9f56",
+                "reference": "f8048b9450da0d68015f8174459dd6f317df9f56",
                 "shasum": ""
             },
             "require": {
@@ -3503,9 +3503,9 @@
             "description": "Mercado Pago PHP SDK",
             "homepage": "https://github.com/mercadopago/sdk-php",
             "support": {
-                "source": "https://github.com/mercadopago/sdk-php/tree/2.5.1"
+                "source": "https://github.com/mercadopago/sdk-php/tree/2.5.2"
             },
-            "time": "2022-09-27T19:06:00+00:00"
+            "time": "2022-11-22T15:07:07+00:00"
         },
         {
             "name": "milon/barcode",
@@ -8837,16 +8837,16 @@
         },
         {
             "name": "laravel/sail",
-            "version": "v1.16.2",
+            "version": "v1.16.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/laravel/sail.git",
-                "reference": "7d1ed5f856ec8b9708712e3fc0708fcabe114659"
+                "reference": "0dbee8802e17911afbe29a8506316343829b056e"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/laravel/sail/zipball/7d1ed5f856ec8b9708712e3fc0708fcabe114659",
-                "reference": "7d1ed5f856ec8b9708712e3fc0708fcabe114659",
+                "url": "https://api.github.com/repos/laravel/sail/zipball/0dbee8802e17911afbe29a8506316343829b056e",
+                "reference": "0dbee8802e17911afbe29a8506316343829b056e",
                 "shasum": ""
             },
             "require": {
@@ -8893,7 +8893,7 @@
                 "issues": "https://github.com/laravel/sail/issues",
                 "source": "https://github.com/laravel/sail"
             },
-            "time": "2022-09-28T13:13:22+00:00"
+            "time": "2022-11-21T16:19:18+00:00"
         },
         {
             "name": "mockery/mockery",

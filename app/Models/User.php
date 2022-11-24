@@ -6,9 +6,10 @@ use Carbon\Carbon;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
 use Laravel\Sanctum\HasApiTokens;
-
+use Illuminate\Database\Eloquent\Factories\HasFactory;
 class User extends Authenticatable
 {
+    use HasFactory;
     use Notifiable, HasApiTokens;
 
     /**
@@ -246,7 +247,7 @@ class User extends Authenticatable
                             <b>تاريخ البدء</b> : {start_date}<br>
                             <b>تاريخ الانتهاء</b> : {end_date}</span></p><p><br></p>',
 
-                         
+
 
                     'da' => '<p><span style="font-size: 14px; font-family: sans-serif;">Hej,</span>
                             <br style="font-size: 14px; font-family: sans-serif;">
@@ -259,7 +260,7 @@ class User extends Authenticatable
                             <b>Start dato</b> : {start_date}<br>
                             <b>Slutdato</b> : {end_date}</span></p><p><br></p>',
 
-                           
+
 
                     'de' => '<p><span style="font-size: 14px; font-family: sans-serif;">Hallo,</span>
                             <br style="font-size: 14px; font-family: sans-serif;">
@@ -272,7 +273,7 @@ class User extends Authenticatable
                             <b>Anfangsdatum</b> : {start_date}<br>
                             <b>Endtermin</b> : {end_date}</span></p><p><br></p>',
 
-                        
+
                     'en' => '<p><span style="font-size: 14px; font-family: sans-serif;">Hello,</span>
                             <br style="font-size: 14px; font-family: sans-serif;">
                             <span style="font-size: 14px; font-family: sans-serif;">New Contract has been Assign to you.</span>
@@ -307,7 +308,7 @@ class User extends Authenticatable
                             <b>Date de début</b> : {start_date}<br>
                             <b>Date de fin</b> : {end_date}</span></p><p><br></p>',
 
-                          
+
 
                     'it' => '<p><span style="font-size: 14px; font-family: sans-serif;">Ciao,</span>
                             <br style="font-size: 14px; font-family: sans-serif;">
@@ -343,7 +344,7 @@ class User extends Authenticatable
                             <b>Startdatum</b> : {start_date}<br>
                             <b>Einddatum</b> : {end_date}</span></p><p><br></p>',
 
-                          
+
 
                     'pl' => '<p><span style="font-size: 14px; font-family: sans-serif;">Witam,</span>
                             <br style="font-size: 14px; font-family: sans-serif;">
@@ -356,7 +357,7 @@ class User extends Authenticatable
                             <b>Data rozpoczęcia</b> : {start_date}<br>
                             <b>Data zakonczenia</b> : {end_date}</span></p><p><br></p>',
 
-                        
+
 
                     'ru' => '<p><span style="font-size: 14px; font-family: sans-serif;">Привет,</span>
                             <br style="font-size: 14px; font-family: sans-serif;">
@@ -369,7 +370,7 @@ class User extends Authenticatable
                             <b>Дата начала</b> : {start_date}<br>
                             <b>Дата окончания</b> : {end_date}</span></p><p><br></p>',
 
-                          
+
 
                     'pt' => '<p><span style="font-size: 14px; font-family: sans-serif;">Olá,</span>
                             <br style="font-size: 14px; font-family: sans-serif;">
@@ -436,10 +437,10 @@ class User extends Authenticatable
         else
         {
             return false;
-            
+
         }
 
-       
+
     }
 
     // check project is shared or not
@@ -453,7 +454,7 @@ class User extends Authenticatable
         else
         {
             return false;
-            
+
         }
     }
 
@@ -539,7 +540,7 @@ class User extends Authenticatable
         }
 
         return $arrReturn;
-    } 
+    }
 
     public static function GetusrRole()
     {
@@ -567,9 +568,9 @@ class User extends Authenticatable
     public function user_contacts()
     {
         return $this->hasOne('App\Models\UserContact', 'user_id', 'id');
-    } 
-    
-   
+    }
+
+
 
 
 
