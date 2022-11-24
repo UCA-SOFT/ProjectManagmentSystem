@@ -254,34 +254,18 @@
                             <i class="fas fa-heart"></i>
                         </div>
                         <span class="d-block mt-4 h3 text-danger">97%</span>
-                        <span class="d-block mt-2 h6">Happy clients</span>
+                        <span class="d-block mt-2 h6">Clientes satisfechos</span>
                     </div>
                 </div>
-                <div class="col-lg-3 col-6 mb-5 mb-lg-0">
-                    <div class="text-center mb-5 mb-lg-0">
-                        <div class="icon icon-lg text-primary">
-                            <i class="fas fa-clock"></i>
-                        </div>
-                        <span class="d-block mt-4 h3 text-primary">365x7</span>
-                        <span class="d-block mt-2 h6">Customer support</span>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-6 mb-5 mb-lg-0">
-                    <div class="text-center">
-                        <div class="icon icon-lg text-warning">
-                            <i class="fas fa-images"></i>
-                        </div>
-                        <span class="d-block mt-4 h3 text-warning">70+</span>
-                        <span class="d-block mt-2 h6">Pre-built features</span>
-                    </div>
-                </div>
+
+
                 <div class="col-lg-3 col-6 mb-5 mb-lg-0">
                     <div class="text-center">
                         <div class="icon icon-lg text-info">
                             <i class="fas fa-layer-group"></i>
                         </div>
                         <span class="d-block mt-4 h2 text-info">100%</span>
-                        <span class="d-block mt-2 h6">Refund Policy</span>
+                        <span class="d-block mt-2 h6">Auto administrable</span>
                     </div>
                 </div>
             </div>
