@@ -1,5 +1,5 @@
 <!doctype html>
-@php 
+@php
     $SITE_RTL = Cookie::get('SITE_RTL');
     $logo = \App\Models\Utility::get_file('logo/');
 @endphp
@@ -35,16 +35,16 @@
         <div class="collapse navbar-collapse" id="navbar-main-collapse">
             <ul class="navbar-nav align-items-lg-center">
                 <li class="nav-item">
-                    <a class="nav-link" href="#features" data-scroll-to="">Features</a>
+                    <a class="nav-link" href="#features" data-scroll-to="">Caracteristicas</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#reviews" data-scroll-to="">Testimonials</a>
+                    <a class="nav-link" href="#reviews" data-scroll-to="">Testimonios</a>
                 </li>
             </ul>
             <ul class="navbar-nav align-items-lg-center ml-lg-auto">
-                <li class="nav-item d-lg-none d-xl-block">
-                    <a class="nav-link" href="#pricing" data-scroll-to="">Pricing</a>
-                </li>
+{{--                <li class="nav-item d-lg-none d-xl-block">--}}
+{{--                    <a class="nav-link" href="#pricing" data-scroll-to="">Pricing</a>--}}
+{{--                </li>--}}
                 @if (Route::has('login'))
                     @auth
                         <li class="nav-item">
@@ -108,10 +108,10 @@
             <div class="row row-grid justify-content-around align-items-center">
                 <div class="col-lg-8">
                     <div class="pt-6 text-center">
-                        <h1 class="text-white mb-3">Try it. Love it</h1>
-                        <p class="lead text-white lh-180 w-75 mx-auto">We build modern web tools to help you jump-start your daily business work.</p>
-                        <a href="#pricing" data-scroll-to class="btn btn-white btn-white btn-icon rounded-pill hover-translate-y-n3 mt-4">
-                            <span class="btn-inner--text">Start Now</span>
+                        <h1 class="text-white mb-3">Prueba hoy mismo!</h1>
+                        <p class="lead text-white lh-180 w-75 mx-auto">Construimos una aplicacion sencilla y moderna para gestionar tus proyectos</p>
+                        <a href="{{ route('login') }}" data-scroll-to class="btn btn-white btn-white btn-icon rounded-pill hover-translate-y-n3 mt-4">
+                            <span class="btn-inner--text">Inicia hoy!</span>
                             <span class="btn-inner--icon"><i class="fas fa-angle-right"></i></span>
                         </a>
                     </div>
@@ -150,9 +150,9 @@
     <section class="slice bg-section-secondary delimiter-bottom">
         <div class="container">
             <div class="mb-5 text-center">
-                <h3 class=" mt-4">Trusted by over 1000 clients</h3>
+                <h3 class=" mt-4">Respaldados por más de 1000 usuarios</h3>
                 <div class="fluid-paragraph mt-3">
-                    <p class="lead lh-180">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text.</p>
+                    <p class="lead lh-180">Desde estudiantes, freelancer hasta instituciones publicas!!!</p>
                 </div>
             </div>
             <div class="hover-blurable">
@@ -177,7 +177,7 @@
                             <img alt="Image placeholder" src="{{ asset('landing/img/airbnb-gray.svg') }}">
                         </div>
                     </div>
-                    <span class="blurable-hidden btn btn-sm btn-primary rounded-pill">See all customers</span>
+                    <span class="blurable-hidden btn btn-sm btn-primary rounded-pill">Mira nuestros más importantes clientes</span>
                 </a>
             </div>
         </div>
@@ -188,8 +188,8 @@
             <div class="row row-grid justify-content-around align-items-center">
                 <div class="col-lg-5">
                     <div class="">
-                        <h5 class=" h3">Project management</h5>
-                        <p class="lead my-4">Project tab allows you to view your projects in grid and list view. It allows you to filter the projects through different options. The flagged option allows you to search for projects on basis of their status. Also allows you to invite members on different projects.</p>
+                        <h5 class=" h3">Gestión de proyectos</h5>
+                        <p class="lead my-4">La pestaña Proyecto le permite ver sus proyectos en cuadrícula y vista de lista. Te permite filtrar los proyectos a través de diferentes opciones. La opción marcada le permite buscar proyectos en función de su estado. También te permite invitar a miembros a diferentes proyectos.</p>
                     </div>
                 </div>
                 <div class="col-lg-6">
@@ -199,28 +199,28 @@
         </div>
     </section>
     <!-- Features (v15) -->
-    <section class="slice slice-lg">
-        <div class="container">
-            <div class="row row-grid justify-content-around align-items-center">
-                <div class="col-lg-5 order-lg-2">
-                    <div class=" pr-lg-4">
-                        <h5 class=" h3">Chat</h5>
-                        <p class="lead my-4">Chat with existing users through easy chat portal. You can send and receive important messages without getting distracted.</p>
-                    </div>
-                </div>
-                <div class="col-lg-6 order-lg-1">
-                    <img alt="Image placeholder" src="{{ asset('landing/img/taskgo-saas-chats.png') }}" class="img-fluid img-center">
-                </div>
-            </div>
-        </div>
-    </section>
+{{--    <section class="slice slice-lg">--}}
+{{--        <div class="container">--}}
+{{--            <div class="row row-grid justify-content-around align-items-center">--}}
+{{--                <div class="col-lg-5 order-lg-2">--}}
+{{--                    <div class=" pr-lg-4">--}}
+{{--                        <h5 class=" h3">Chat</h5>--}}
+{{--                        <p class="lead my-4">Chat with existing users through easy chat portal. You can send and receive important messages without getting distracted.</p>--}}
+{{--                    </div>--}}
+{{--                </div>--}}
+{{--                <div class="col-lg-6 order-lg-1">--}}
+{{--                    <img alt="Image placeholder" src="{{ asset('landing/img/taskgo-saas-chats.png') }}" class="img-fluid img-center">--}}
+{{--                </div>--}}
+{{--            </div>--}}
+{{--        </div>--}}
+{{--    </section>--}}
     <section class="slice slice-lg">
         <div class="container">
             <div class="row row-grid justify-content-around align-items-center">
                 <div class="col-lg-5">
                     <div class="">
-                        <h5 class=" h3">User Overview</h5>
-                        <p class="lead my-4">You get a detailed insight into users timesheet, tasks, skills, projects, attachments, due tasks and social media details under a single page. A graphical visual of timesheet of each user can be accessed with ease.</p>
+                        <h5 class=" h3">Listado de usuarios</h5>
+                        <p class="lead my-4">Obtiene una visión detallada de la hoja de tiempo, las tareas, las habilidades, los proyectos, los archivos adjuntos, las tareas vencidas y los detalles de las redes sociales de los usuarios en una sola página. Se puede acceder fácilmente a una visualización gráfica de la hoja de tiempo de cada usuario.</p>
                     </div>
                 </div>
                 <div class="col-lg-6">
@@ -234,8 +234,8 @@
             <div class="row row-grid justify-content-around align-items-center">
                 <div class="col-lg-5 order-lg-2">
                     <div class=" pr-lg-4">
-                        <h5 class=" h3">Timesheet Management</h5>
-                        <p class="lead my-4">You can manage the timesheet of each projects by adding task wise. This would ensure project completion on time and you get know which user worked how much time on each task.</p>
+                        <h5 class=" h3">Gestión de horas trabajadas</h5>
+                        <p class="lead my-4">Puede administrar la hoja de tiempo de cada proyecto agregando tareas. Esto garantizaría la finalización del proyecto a tiempo y sabrá qué usuario trabajó cuánto tiempo en cada tarea.</p>
                     </div>
                 </div>
                 <div class="col-lg-6 order-lg-1">
@@ -287,7 +287,7 @@
             </div>
         </div>
     </section>
-   
+
     <!-- Testimonials (v1) -->
     <section class="slice slice-lg" id="reviews">
         <div class="container">
