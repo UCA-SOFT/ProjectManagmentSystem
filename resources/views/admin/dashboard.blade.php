@@ -36,7 +36,7 @@ $logo_path = \App\Models\Utility::get_file('/');
                     <div class="card-body">
                         <div class="row">
                             <div class="col">
-                                <h6 class="text-muted mb-1">{{__('Total Projects')}}</h6>
+                                <h6 class="text-muted mb-1">{{__('Total de proyectos')}}</h6>
                                 <span class="h3 font-weight-bold mb-0 ">{{ $home_data['total_project']['total'] }}</span> <br>
                             </div>
                             <div class="col-auto">
@@ -51,7 +51,7 @@ $logo_path = \App\Models\Utility::get_file('/');
                     <div class="card-body">
                         <div class="row">
                             <div class="col">
-                                <h6 class="text-muted mb-1">{{__('Total Tasks')}}</h6>
+                                <h6 class="text-muted mb-1">{{__('Total de tareas')}}</h6>
                                 <span class="h3 font-weight-bold mb-0 ">{{ $home_data['total_task']['total'] }}</span>
                             </div>
                             <div class="col-auto">
@@ -66,7 +66,7 @@ $logo_path = \App\Models\Utility::get_file('/');
                     <div class="card-body">
                         <div class="row">
                             <div class="col">
-                                <h6 class="text-muted mb-1">{{__('Total Expense')}}</h6>
+                                <h6 class="text-muted mb-1">{{__('Costo total')}}</h6>
                                 <span class="h3 font-weight-bold mb-0 ">{{ $home_data['total_expense']['total'] }}</span>
                             </div>
                             <div class="col-auto">
@@ -81,7 +81,7 @@ $logo_path = \App\Models\Utility::get_file('/');
                     <div class="card-body">
                         <div class="row">
                             <div class="col">
-                                <h6 class="text-muted mb-1">{{__('Total Users')}}</h6>
+                                <h6 class="text-muted mb-1">{{__('Total de Usuarios')}}</h6>
                                 <span class="h3 font-weight-bold mb-0 ">{{ $home_data['total_user'] }}</span>
                             </div>
                         </div>
@@ -93,8 +93,8 @@ $logo_path = \App\Models\Utility::get_file('/');
             <div class="col-xl-12 col-md-12">
                 <div class="card card-fluid">
                     <div class="card-header">
-                        <h6 class="mb-0">{{__('Tasks Overview')}}</h6>
-                        <small class="text-muted">{{__('Total Completed task in last 7 days')}}</small>
+                        <h6 class="mb-0">{{__('Vista general de las tareas')}}</h6>
+                        <small class="text-muted">{{__('Total de tareas completadas en los últimos 7 días')}}</small>
                     </div>
                     <div class="card-body">
                         <div id="task_overview" data-color="primary" data-height="280"></div>
@@ -106,7 +106,7 @@ $logo_path = \App\Models\Utility::get_file('/');
             <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4">
                 <div class="card card-fluid">
                     <div class="card-header">
-                        <h6 class="mb-0">{{__('Project Status')}}</h6>
+                        <h6 class="mb-0">{{__('Estado de proyectos')}}</h6>
                     </div>
                     <div class="card-body">
                         @foreach($home_data['project_status'] as $status => $val)
@@ -143,7 +143,7 @@ $logo_path = \App\Models\Utility::get_file('/');
                     <div class="scrollbar-inner">
                         <div class="min-h-430 mh-430 table_scroll">
                             <div class="list-group list-group-flush">
-                           
+
                                 @if($home_data['due_project']->count() > 0)
                                     @foreach($home_data['due_project'] as $due_project)
                                         <a href="{{ route('projects.show',$due_project) }}" class="list-group-item list-group-item-action">
@@ -191,7 +191,7 @@ $logo_path = \App\Models\Utility::get_file('/');
                     <div class="card-header">
                         <div class="d-flex justify-content-between align-items-center">
                             <div>
-                                <h6 class="mb-0">{{__('Top Due Projects')}}</h6>
+                                <h6 class="mb-0">{{__('Principales proyectos vencidos')}}</h6>
                             </div>
                         </div>
                     </div>

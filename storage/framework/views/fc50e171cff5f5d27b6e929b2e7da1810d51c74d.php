@@ -56,8 +56,8 @@
                         </li>
                     <?php else: ?>
                         <li class="nav-item">
-                            <a href="<?php echo e(route('login')); ?>" class="nav-link d-lg-none"><?php echo e(__('Login')); ?></a>
-                            <a href="<?php echo e(route('login')); ?>" class="btn btn-sm btn-white btn-icon rounded-pill d-none d-lg-inline-flex">
+                            <a href="<?php echo e(route('login')); ?>/es" class="nav-link d-lg-none"><?php echo e(__('Login')); ?></a>
+                            <a href="<?php echo e(route('login')); ?>/es" class="btn btn-sm btn-white btn-icon rounded-pill d-none d-lg-inline-flex">
                                 <span class="btn-inner--icon"><i class="fas fa-sign-in-alt"></i></span>
                                 <span class="btn-inner--text"><?php echo e(__('Login')); ?></span>
                             </a>
@@ -110,7 +110,7 @@
                     <div class="pt-6 text-center">
                         <h1 class="text-white mb-3">Prueba hoy mismo!</h1>
                         <p class="lead text-white lh-180 w-75 mx-auto">Construimos una aplicacion sencilla y moderna para gestionar tus proyectos</p>
-                        <a href="<?php echo e(route('login')); ?>" data-scroll-to class="btn btn-white btn-white btn-icon rounded-pill hover-translate-y-n3 mt-4">
+                        <a href="<?php echo e(route('login')); ?>/es" data-scroll-to class="btn btn-white btn-white btn-icon rounded-pill hover-translate-y-n3 mt-4">
                             <span class="btn-inner--text">Inicia hoy!</span>
                             <span class="btn-inner--icon"><i class="fas fa-angle-right"></i></span>
                         </a>
@@ -276,9 +276,9 @@
     <section class="slice slice-lg" id="reviews">
         <div class="container">
             <div class="mb-5 text-center">
-                <h3 class=" mt-4">What our customers say</h3>
+                <h3 class=" mt-4">Lo que dicen nuestros clientes</h3>
                 <div class="fluid-paragraph mt-3">
-                    <p class="lead lh-180">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua</p>
+
                 </div>
             </div>
             <div class="row justify-content-center">
@@ -296,11 +296,11 @@
                                                         <img alt="Image placeholder" src="<?php echo e(asset('landing/img/team-1-800x800.jpg')); ?>" class="avatar  rounded-circle">
                                                     </div>
                                                     <div class="pl-3">
-                                                        <h5 class="h6 mb-0">Heather Wright</h5>
+                                                        <h5 class="h6 mb-0">Beatriz salazar</h5>
                                                         <small class="d-block text-muted">Google</small>
                                                     </div>
                                                 </div>
-                                                <p class="mt-4 lh-180">It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.</p>
+                                                <p class="mt-4 lh-180">Es un hecho establecido desde hace mucho tiempo que un lector se distraerá con el contenido legible de una página cuando mire su diseño.</p>
                                                 <span class="static-rating static-rating-sm">
                             <i class="star fas fa-star voted"></i>
                             <i class="star fas fa-star voted"></i>
@@ -324,7 +324,7 @@
                                                         <small class="d-block text-muted">Apple</small>
                                                     </div>
                                                 </div>
-                                                <p class="mt-4 lh-180">It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.</p>
+                                                <p class="mt-4 lh-180">Es un hecho establecido desde hace mucho tiempo que un lector se distraerá con el contenido legible de una página cuando mire su diseño.</p>
                                                 <span class="static-rating static-rating-sm">
                             <i class="star fas fa-star voted"></i>
                             <i class="star fas fa-star voted"></i>
@@ -455,71 +455,71 @@
                                 <i class="fas fa-file-alt text-white"></i>
                             </div>
                             <div class="icon-text">
-                                <h3 class="text-white h4">Attractive pages</h3>
-                                <p class="text-white mb-0">These cases are perfectly simple and easy to distinguish. In a free hour, when our power of choice is untrammelled and when nothing prevents.</p>
+                                <h3 class="text-white h4">Páginas atractivas</h3>
+                                <p class="text-white mb-0">Estos casos son perfectamente simples y sencillos de distinguir. En una hora libre, cuando nuestro poder de elección está libre y cuando nada lo impide.</p>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-            <div class="col-md-6">
-                <div class="card bg-primary shadow hover-shadow-lg border-0 position-relative zindex-100">
-                    <div class="card-body py-5">
-                        <div class="d-flex align-items-start">
-                            <div class="icon text-white">
-                                <i class="fas fa-question-circle"></i>
-                            </div>
-                            <div class="icon-text">
-                                <h5 class="h4 text-white">6 months technical support</h5>
-                                <p class="mb-0 text-white">Use our dedicated support email to send your issues or suggestions. We are here to help anytime: <strong>support@taskgo.com</strong></p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
         </div>
     </div>
 </section>
 <footer id="footer-main">
     <div class="footer footer-dark bg-gradient-primary footer-rotate">
         <div class="container">
-            <div class="row pt-md">
-                <div class="col-lg-4 mb-5 mb-lg-0">
-                    <a href="<?php echo e(url('home')); ?>">
-                        <img src="<?php echo e($logo.'logo.png'); ?>" id="navbar-logo" style="height: 25px;">
-                    </a>
-                    <p class="mt-3">TaskGo is a task management tool with advanced features that would allow you to manage tasks of projects with utmost ease.</p>
-                </div>
-                <div class="col-lg-2 col-6 col-sm-4 ml-lg-auto mb-5 mb-lg-0">
-                    <h6 class="heading mb-3">Account</h6>
-                    <ul class="list-unstyled">
-                        <li><a href="#">Profile</a></li>
-                        <li><a href="#">Settings</a></li>
-                        <li><a href="#">Billing</a></li>
-                        <li><a href="#">Notifications</a></li>
-                    </ul>
-                </div>
-                <div class="col-lg-2 col-6 col-sm-4 mb-5 mb-lg-0">
-                    <h6 class="heading mb-3">About</h6>
-                    <ul class="list-unstyled text-small">
-                        <li><a href="#">Services</a></li>
-                        <li><a href="#">Contact</a></li>
-                        <li><a href="#">Careers</a></li>
-                    </ul>
-                </div>
-                <div class="col-lg-2 col-sm-4 mb-5 mb-lg-0">
-                    <h6 class="heading mb-3">Company</h6>
-                    <ul class="list-unstyled">
-                        <li><a href="#">Terms</a></li>
-                        <li><a href="#">Privacy</a></li>
-                        <li><a href="#">Support</a></li>
-                    </ul>
-                </div>
-            </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
             <div class="row align-items-center justify-content-md-between py-4 mt-4 delimiter-top">
                 <div class="col-md-6">
                     <div class="copyright text-sm font-weight-bold text-center text-md-left">
-                        © 2020-2021 <a href="#" class="font-weight-bold"><?php echo e(env('APP_NAME')); ?></a>. All rights reserved.
+                        © 2022-2023 <a href="#" class="font-weight-bold"><?php echo e(env('APP_NAME')); ?></a>. All rights reserved.
                     </div>
                 </div>
                 <div class="col-md-6">

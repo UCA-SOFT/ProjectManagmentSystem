@@ -5,7 +5,7 @@
     <div class="col-md-12 col-12 add_user_div d-none">
         <div class="form-group">
             {{ Form::label('username', __('Name'),['class' => 'form-control-label']) }}
-            {{ Form::text('username', null, ['class' => 'form-control', 'placeholder' => __('Please enter name')]) }}
+            {{ Form::text('username', null, ['class' => 'form-control', 'placeholder' => __('Ingrese un nombre')]) }}
         </div>
     </div>
     <div class="col-md-12">

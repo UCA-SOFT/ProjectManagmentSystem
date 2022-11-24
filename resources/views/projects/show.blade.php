@@ -20,9 +20,9 @@
             </a>
         @endif
         <a href="{{ route('projects.tasks.index',$project->id) }}" class="btn btn-sm bg-white btn-icon rounded-pill ml-0">
-            <span class="btn-inner--text text-dark">{{__('Tasks')}}</span>
+            <span class="btn-inner--text text-dark">{{__('Tareas')}}</span>
         </a>
-       
+
         <a href="{{ route('timesheet.index',$project->id) }}" class="btn btn-sm bg-white btn-icon rounded-pill ml-0">
             <span class="btn-inner--text text-dark">{{__('Timesheet')}}</span>
         </a>
@@ -34,7 +34,7 @@
         </a>
         @if(isset($permissions) && (in_array('show expense',$permissions) || in_array('create expense',$permissions)))
             <a href="{{ route('projects.expenses.index',$project->id) }}" class="btn btn-sm bg-white btn-icon rounded-pill ml-0">
-                <span class="btn-inner--text text-dark">{{__('Expense')}}</span>
+                <span class="btn-inner--text text-dark">{{__('Costo')}}</span>
             </a>
         @endif
     </div>
@@ -431,10 +431,10 @@
                                                        </div>
                                                        <div class="progress_labels">
                                                           <div class="total_progress">
-                                                          
+
                                                              <strong> {{ $milestone->progress }}%</strong>
                                                           </div>
-                                                     
+
                                                        </div>
                                                       </div>
 
@@ -506,7 +506,7 @@
                                                     <p class="card-text small text-muted">{{ $attachment->file_size }}</p>
                                                 </div>
                                                 <div class="col-auto actions">
-                                                       
+
                                                     <a href="{{asset(Storage::url('tasks/'.$attachment->file))}}" target="_blank" class="action-item" role="button">
                                                         <i class="fas fa-eye"></i>
                                                     </a>
@@ -571,29 +571,29 @@
         @endif
     </div>
 
-    <div class="card" id="email-notification">
-        <div class="card-header">
-            <h5>{{ __('Email Notification') }}</h5>
-        </div>
-        <div class="card-body table-border-style row">
-            @foreach ($EmailTemplates as $EmailTemplate)
-            
-                <div class="col-md-4">
-                    <li class="list-group-item d-flex align-items-center justify-content-between">
-                        <span>{{$EmailTemplate->name }}</span>
-                        @php
-                $templates_status = \App\Models\EmailTemplate::templates($project->id , $EmailTemplate->id);
-            @endphp
-                        <div class="form-check form-switch d-inline-block float-right">
-                            <input type="checkbox" class="form-check-input email-template-checkbox custom_checkbox" id="email_tempalte_{{$templates_status->id}}" @if($templates_status->is_active == 1) checked="checked" @endcan type="checkbox" value="{{$templates_status->is_active == 1 ? '1' : '0'}}" data-url="{{route('status.email.language', [$EmailTemplate->id , $project->id ])}}"/>
-                            <label class="form-check-label" for="lead_notification"></label>
-                        </div>
-                    </li>
-                </div>
-            @endforeach
-        </div>
-    </div>
-    
+{{--    <div class="card" id="email-notification">--}}
+{{--        <div class="card-header">--}}
+{{--            <h5>{{ __('Email Notification') }}</h5>--}}
+{{--        </div>--}}
+{{--        <div class="card-body table-border-style row">--}}
+{{--            @foreach ($EmailTemplates as $EmailTemplate)--}}
+
+{{--                <div class="col-md-4">--}}
+{{--                    <li class="list-group-item d-flex align-items-center justify-content-between">--}}
+{{--                        <span>{{$EmailTemplate->name }}</span>--}}
+{{--                        @php--}}
+{{--                $templates_status = \App\Models\EmailTemplate::templates($project->id , $EmailTemplate->id);--}}
+{{--            @endphp--}}
+{{--                        <div class="form-check form-switch d-inline-block float-right">--}}
+{{--                            <input type="checkbox" class="form-check-input email-template-checkbox custom_checkbox" id="email_tempalte_{{$templates_status->id}}" @if($templates_status->is_active == 1) checked="checked" @endcan type="checkbox" value="{{$templates_status->is_active == 1 ? '1' : '0'}}" data-url="{{route('status.email.language', [$EmailTemplate->id , $project->id ])}}"/>--}}
+{{--                            <label class="form-check-label" for="lead_notification"></label>--}}
+{{--                        </div>--}}
+{{--                    </li>--}}
+{{--                </div>--}}
+{{--            @endforeach--}}
+{{--        </div>--}}
+{{--    </div>--}}
+
 @endsection
 
 @push('script')

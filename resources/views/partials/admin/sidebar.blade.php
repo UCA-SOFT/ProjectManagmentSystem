@@ -76,7 +76,7 @@ $logo_path=\App\Models\Utility::get_file('/');
     @if(Auth::user()->type != 'admin')
         <a href="{{ route('projects.index') }}" class="btn btn-square text-sm {{ request()->is('project*') ? 'active' : '' }}">
             <span class="btn-inner--icon d-block"><i class="fas fa-project-diagram fa-2x"></i></span>
-            <span class="btn-inner--icon d-block pt-2">{{__('Projects')}}</span>
+            <span class="btn-inner--icon d-block pt-2">{{__('Proyectos')}}</span>
         </a>
         <a href="{{ route('taskBoard.view') }}" class="btn btn-square text-sm {{ request()->is('taskboard*') ? 'active' : '' }}">
             <span class="btn-inner--icon d-block"><i class="fas fa-tasks fa-2x"></i></span>
@@ -84,23 +84,23 @@ $logo_path=\App\Models\Utility::get_file('/');
         </a>
         <a href="{{ route('users') }}" class="btn btn-square text-sm {{ request()->is('users*') ? 'active' : '' }}">
             <span class="btn-inner--icon d-block"><i class="fas fa-users fa-2x"></i></span>
-            <span class="btn-inner--icon d-block pt-2">{{__('Members')}}</span>
+            <span class="btn-inner--icon d-block pt-2">{{__('Miembros')}}</span>
         </a>
 
-        @if ( Auth::user()->type == 'owner' || \App\Models\User::GetusrRole()['role'] == 'client')
-        <a href="{{ route('contractclient.index') }}" class="btn btn-square text-sm {{ request()->is('contractclient*') ? 'active' : '' }}">
-            <span class="btn-inner--icon d-block"><i class="fas fa-receipt fa-2x"></i></span>
-            <span class="btn-inner--icon d-block pt-2">{{__('Contract')}}</span>
-        </a>
-        @endif
+{{--        @if ( Auth::user()->type == 'owner' || \App\Models\User::GetusrRole()['role'] == 'client')--}}
+{{--        <a href="{{ route('contractclient.index') }}" class="btn btn-square text-sm {{ request()->is('contractclient*') ? 'active' : '' }}">--}}
+{{--            <span class="btn-inner--icon d-block"><i class="fas fa-receipt fa-2x"></i></span>--}}
+{{--            <span class="btn-inner--icon d-block pt-2">{{__('Contract')}}</span>--}}
+{{--        </a>--}}
+{{--        @endif--}}
 
-        <a href="{{ route('invoices.index') }}" class="btn btn-square text-sm {{ request()->is('invoices*') ? 'active' : '' }}">
-            <span class="btn-inner--icon d-block"><i class="fas fa-receipt fa-2x"></i></span>
-            <span class="btn-inner--icon d-block pt-2">{{__('Invoices')}}</span>
-        </a>
+{{--        <a href="{{ route('invoices.index') }}" class="btn btn-square text-sm {{ request()->is('invoices*') ? 'active' : '' }}">--}}
+{{--            <span class="btn-inner--icon d-block"><i class="fas fa-receipt fa-2x"></i></span>--}}
+{{--            <span class="btn-inner--icon d-block pt-2">{{__('Invoices')}}</span>--}}
+{{--        </a>--}}
         <a href="{{ route('task.calendar',['all']) }}" class="btn btn-square text-sm {{ request()->is('calendar*') ? 'active' : '' }}">
             <span class="btn-inner--icon d-block"><i class="fas fa-calendar-week fa-2x"></i></span>
-            <span class="btn-inner--icon d-block pt-2">{{__('Calendar')}}</span>
+            <span class="btn-inner--icon d-block pt-2">{{__('Calendario')}}</span>
         </a>
         <a href="{{ route('timesheet.list') }}" class="btn btn-square text-sm {{ request()->is('timesheet-list') ? 'active' : '' }}">
             <span class="btn-inner--icon d-block"><i class="fas fa-clock fa-2x"></i></span>
@@ -110,36 +110,36 @@ $logo_path=\App\Models\Utility::get_file('/');
             <span class="btn-inner--icon d-block"><i class="fas fa-stopwatch fa-2x"></i></span>
             <span class="btn-inner--icon d-block pt-2">{{__('Tracker')}}</span>
         </a>
-        <a href="{{ route('zoommeeting.index') }}" class="btn btn-square text-sm {{ request()->is('zoommeeting*') ? 'active' : '' }}">
-            <span class="btn-inner--icon d-block"><i class="fas fa-video fa-2x"></i></span>
-            <span class="btn-inner--icon d-block pt-2">{{__('Zoom Meeting')}}</span>
-        </a>
+{{--        <a href="{{ route('zoommeeting.index') }}" class="btn btn-square text-sm {{ request()->is('zoommeeting*') ? 'active' : '' }}">--}}
+{{--            <span class="btn-inner--icon d-block"><i class="fas fa-video fa-2x"></i></span>--}}
+{{--            <span class="btn-inner--icon d-block pt-2">{{__('Zoom Meeting')}}</span>--}}
+{{--        </a>--}}
 
          @if(Auth::user()->type != 'admin')
             <a href="{{ route('report_project.index') }}" class="btn btn-square text-sm  {{ request()->is('report_project*') ? 'active' : '' }}">
                 <span class="btn-inner--icon d-block"><i class="fas fa-chart-line fa-2x"></i></span>
-            <span class="btn-inner--icon d-block pt-2">{{__('Project Report')}}</span>
-                
+            <span class="btn-inner--icon d-block pt-2">{{__('Reportes')}}</span>
+
             </a>
             @endif
-        <a href="{{ url('chats') }}" class="btn btn-square text-sm {{ request()->is('chats') ? 'active' : '' }}">
-            <span class="btn-inner--icon d-block"><i class="fas fa-comments fa-2x"></i></span>
-            <span class="btn-inner--icon d-block pt-2">{{__('Messenger')}}</span>
-        </a>
+{{--        <a href="{{ url('chats') }}" class="btn btn-square text-sm {{ request()->is('chats') ? 'active' : '' }}">--}}
+{{--            <span class="btn-inner--icon d-block"><i class="fas fa-comments fa-2x"></i></span>--}}
+{{--            <span class="btn-inner--icon d-block pt-2">{{__('Messenger')}}</span>--}}
+{{--        </a>--}}
     @endif
     @if(Auth::user()->type == 'admin')
         <a href="{{route('lang',basename(App::getLocale()))}}" class="btn btn-square text-sm {{ request()->is('lang*') ? 'active' : '' }}">
             <span class="btn-inner--icon d-block"><i class="fas fa-language fa-2x"></i></span>
             <span class="btn-inner--icon d-block pt-2">{{__('Language')}}</span>
         </a>
-        <a href="{{route('email_template.index')}}" class="btn btn-square text-sm {{ request()->is('email_template*') ? 'active' : '' }}">
-            <span class="btn-inner--icon d-block"><i class="fas fa-envelope fa-2x"></i></span>
-            <span class="btn-inner--icon d-block pt-2">{{__('Email Template')}}</span>
-        </a>
+{{--        <a href="{{route('email_template.index')}}" class="btn btn-square text-sm {{ request()->is('email_template*') ? 'active' : '' }}">--}}
+{{--            <span class="btn-inner--icon d-block"><i class="fas fa-envelope fa-2x"></i></span>--}}
+{{--            <span class="btn-inner--icon d-block pt-2">{{__('Email Template')}}</span>--}}
+{{--        </a>--}}
     @endif
     <a href="{{ route('settings') }}" class="btn btn-square text-sm {{ request()->is('settings*') ? 'active' : '' }}">
         <span class="btn-inner--icon d-block"><i class="fas fa-cogs fa-2x"></i></span>
         <span class="btn-inner--icon d-block pt-2">{{__('Settings')}}</span>
     </a>
-   
+
 </div>

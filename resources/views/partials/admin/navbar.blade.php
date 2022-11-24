@@ -40,64 +40,64 @@ $logo_path=\App\Models\Utility::get_file('/');
                         </form>
                     </div>
                 </li>
-                <li class="ml-2">
-                    <div class="row{{!empty($userTask)?"mt-3":""}}">
-                        <div class="col-auto tracking-clock">
-                            @if(\Auth::user()->type != 'admin')
-                            <a href="{{route('taskBoard.view')}}" class="text-white" @if(empty($trackerdata)) data-toggle="tooltip" data-original-title="{{__('No time tracking running')}}" @endif><i class="fa fa-clock"></i></a>
-                        </div>
-                        <div class="col-auto text-white">
-                            <div class="timer-counter"></div>
-                        </div>
-                        <div class="col-auto text-white">
-                            <p class="start-task"></p>
-                        </div>
-                    
-                    </div>
-                </li>
-                <li>
-                    <div>
-                        <a href="{{ url('chats') }}" class="pt-2 text-white">
-                            <span><i class="fas fa-comment" style="font-size: 21px"></i></span>
-                            <span class="badge badge-danger badge-circle badge-btn custom_messanger_counter">
-                                {{$unseenCounter}}
-                            </span>
-                        </a>
-                        </div>
-                </li>
-                @endif
+{{--                <li class="ml-2">--}}
+{{--                    <div class="row{{!empty($userTask)?"mt-3":""}}">--}}
+{{--                        <div class="col-auto tracking-clock">--}}
+{{--                            @if(\Auth::user()->type != 'admin')--}}
+{{--                            <a href="{{route('taskBoard.view')}}" class="text-white" @if(empty($trackerdata)) data-toggle="tooltip" data-original-title="{{__('No time tracking running')}}" @endif><i class="fa fa-clock"></i></a>--}}
+{{--                        </div>--}}
+{{--                        <div class="col-auto text-white">--}}
+{{--                            <div class="timer-counter"></div>--}}
+{{--                        </div>--}}
+{{--                        <div class="col-auto text-white">--}}
+{{--                            <p class="start-task"></p>--}}
+{{--                        </div>--}}
+
+{{--                    </div>--}}
+{{--                </li>--}}
+{{--                <li>--}}
+{{--                    <div>--}}
+{{--                        <a href="{{ url('chats') }}" class="pt-2 text-white">--}}
+{{--                            <span><i class="fas fa-comment" style="font-size: 21px"></i></span>--}}
+{{--                            <span class="badge badge-danger badge-circle badge-btn custom_messanger_counter">--}}
+{{--                                {{$unseenCounter}}--}}
+{{--                            </span>--}}
+{{--                        </a>--}}
+{{--                        </div>--}}
+{{--                </li>--}}
+{{--                @endif--}}
             </ul>
         </div>
         <div class="collapse navbar-collapse navbar-collapse-fade" id="navbar-main-collapse">
             <ul class="navbar-nav align-items-center d-none d-lg-flex">
-              
-                <li class="ml-2">
-                    <div class="row{{!empty($userTask)?"mt-3":""}}">
-                        <div class="col-auto tracking-clock">
-                            @if(\Auth::user()->type != 'admin')
-                            <a href="{{route('taskBoard.view')}}" class="text-white" @if(empty($trackerdata)) data-toggle="tooltip" data-original-title="{{__('No time tracking running')}}" @endif><i class="fa fa-clock"></i></a>
-                        </div>
-                        <div class="col-auto text-white">
-                            <div class="timer-counter"></div>
-                        </div>
-                        <div class="col-auto text-white">
-                            <p class="start-task"></p>
-                        </div>
-                    
-                    </div>
-                </li>
-                {{-- @if(\Auth::user()->type=='company' || \Auth::user()->type=='employee') --}}
-                <li>
-                    <div>
-                        <a href="{{ url('chats') }}" class="pt-2 ml-4 text-white">
-                            <span><i class="fas fa-comment" style="font-size: 21px"></i></span>
-                            <span class="badge badge-danger badge-circle badge-btn custom_messanger_counter">
-                                {{$unseenCounter}}
-                            </span>
-                        </a>
-                    </div>
-                </li>
-                @endif
+
+{{--                <li class="ml-2">--}}
+{{--                    <div class="row{{!empty($userTask)?"mt-3":""}}">--}}
+{{--                        <div class="col-auto tracking-clock">--}}
+{{--                            @if(\Auth::user()->type != 'admin')--}}
+{{--                            <a href="{{route('taskBoard.view')}}" class="text-white" @if(empty($trackerdata)) data-toggle="tooltip" data-original-title="{{__('No time tracking running')}}" @endif><i class="fa fa-clock"></i></a>--}}
+{{--                        </div>--}}
+{{--                        <div class="col-auto text-white">--}}
+{{--                            <div class="timer-counter"></div>--}}
+{{--                        </div>--}}
+{{--                        <div class="col-auto text-white">--}}
+{{--                            <p class="start-task"></p>--}}
+{{--                        </div>--}}
+
+{{--                    </div>--}}
+{{--                </li>--}}
+{{--                --}}{{-- @if(\Auth::user()->type=='company' || \Auth::user()->type=='employee') --}}
+{{--                <li>--}}
+{{--                    <div>--}}
+{{--                        <a href="{{ url('chats') }}" class="pt-2 ml-4 text-white">--}}
+{{--                            <span><i class="fas fa-comment" style="font-size: 21px"></i></span>--}}
+{{--                            <span class="badge badge-danger badge-circle badge-btn custom_messanger_counter">--}}
+{{--                                {{$unseenCounter}}--}}
+{{--                            </span>--}}
+{{--                        </a>--}}
+{{--                    </div>--}}
+{{--                </li>--}}
+{{--                @endif--}}
             </ul>
 
             <ul class="navbar-nav ml-lg-auto align-items-center d-none d-lg-flex">
@@ -128,7 +128,7 @@ $logo_path=\App\Models\Utility::get_file('/');
                         <h6 class="dropdown-header px-0">{{__('Hi,')}} {{ Auth::user()->name }}</h6>
                         <a href="{{ route('profile') }}" class="dropdown-item">
                             <i class="fas fa-user"></i>
-                            <span>{{__('My profile')}}</span>
+                            <span>{{__('Mi perfil')}}</span>
                         </a>
                         <div class="dropdown-divider"></div>
                         <a href="{{ route('logout') }}" class="dropdown-item" onclick="event.preventDefault();document.getElementById('logout-form').submit();">
@@ -141,7 +141,7 @@ $logo_path=\App\Models\Utility::get_file('/');
             <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
                 @csrf
             </form>
-           
+
         </div>
     </div>
 </nav>

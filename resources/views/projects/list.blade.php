@@ -28,7 +28,7 @@ $logo_path = \App\Models\Utility::get_file('/');
                                         @endif
                                     </div>
                                     <div class="media-body ml-4">
-                                        <a href="{{ route('projects.show',$project) }}" class="name mb-0 h6 text-sm">{{ $project->name }}</a> <br> <span class="badge badge-xs badge-{{ (\Auth::user()->checkProject($project->id) == 'Owner') ? 'success' : 'warning'  }}" data-toggle="tooltip" data-placement="bottom" data-original-title="{{__('You are ') .__(ucfirst($project->permission()))}}">{{ \Auth::user()->checkProject($project->id) }}</span>
+                                        <a href="{{ route('projects.show',$project) }}" class="name mb-0 h6 text-sm">{{ $project->name }}</a> <br> <span class="badge badge-xs badge-{{ (\Auth::user()->checkProject($project->id) == 'Owner') ? 'success' : 'warning'  }}" data-toggle="tooltip" data-placement="bottom" data-original-title="{{__('Eres el  ') .__(ucfirst($project->permission()))}}">{{ \Auth::user()->checkProject($project->id) }}</span>
                                     </div>
                                 </div>
                             </th>
@@ -79,7 +79,7 @@ $logo_path = \App\Models\Utility::get_file('/');
                             <td class="text-right w-15">
                                 @if(\Auth::user()->checkProject($project->id) == 'Owner')
                                     <div class="actions">
-                                        <a href="#" data-url="{{ route('invite.project.member.view', $project->id) }}" data-ajax-popup="true" data-size="lg" data-title="{{__('Invite Member')}}" class="action-item px-2" data-toggle="tooltip" data-original-title="{{__('Invite Member')}}">
+                                        <a href="#" data-url="{{ route('invite.project.member.view', $project->id) }}" data-ajax-popup="true" data-size="lg" data-title="{{__('Invitar personal')}}" class="action-item px-2" data-toggle="tooltip" data-original-title="{{__('Invite Member')}}">
                                             <i class="fas fa-paper-plane"></i>
                                         </a>
                                         <a href="{{ route('projects.edit',$project) }}" class="action-item px-2" data-toggle="tooltip" data-original-title="{{__('Edit')}}">
@@ -97,7 +97,7 @@ $logo_path = \App\Models\Utility::get_file('/');
                     @endforeach
                 @else
                     <tr>
-                        <th scope="col" colspan="7"><h6 class="text-center">{{__('No Projects Found.')}}</h6></th>
+                        <th scope="col" colspan="7"><h6 class="text-center">{{__('No se encontraron proyectos')}}</h6></th>
                     </tr>
                 @endif
                 </tbody>

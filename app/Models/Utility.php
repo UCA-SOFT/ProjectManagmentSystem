@@ -21,7 +21,7 @@ class Utility extends Model
         $settings = [
             "gdpr_cookie" => "",
             "cookie_text" => "",
-            "footer_text" => "© 2020 Rajodiya Infotech",
+            "footer_text" => "© 2020 UCA",
             "footer_link_1" => "Support",
             "footer_value_1" => "#",
             "footer_link_2" => "Terms",
@@ -97,7 +97,7 @@ class Utility extends Model
         $settings = [
             "gdpr_cookie" => "",
             "cookie_text" => "",
-            "footer_text" => "© 2020 Rajodiya Infotech",
+            "footer_text" => "© 2022 UCA",
             "footer_link_1" => "Support",
             "footer_value_1" => "#",
             "footer_link_2" => "Terms",
