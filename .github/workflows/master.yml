@@ -1,4 +1,4 @@
-on: 
+on:
   push:
     branches:
     - main
@@ -10,11 +10,11 @@ jobs:
     steps:
     - name: 🚚 Get latest code
       uses: actions/checkout@v2
-    
+
     - name: 📂 Sync files
       uses: SamKirkland/FTP-Deploy-Action@4.3.2
       with:
-        server: http://malwareprojects.site
+        server: 198.54.115.40
         username: ${{ secrets.ftp_username }}
         password: ${{ secrets.ftp_password }}
         server-dir: /public_html/
