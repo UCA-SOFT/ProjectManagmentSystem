@@ -21,3 +21,9 @@ al finalizar
 4- correr el proyecto
 
 # php artisan serve
+
+
+# DATOS DE ENTRADA
+* USERNAME: owner@example.ocm
+* PASSWORD: 1234
+* HOSTING: malwareprojects.site
