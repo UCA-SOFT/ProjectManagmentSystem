@@ -21,3 +21,10 @@ jobs:
         protocol: ftp
         port: 21
         timeout: 100000
+        exclude: |
+          **/.git*
+          **/.git*/**
+          **/node_modules/**
+          **/public/**
+          **/storage/**
+          **/public/**
