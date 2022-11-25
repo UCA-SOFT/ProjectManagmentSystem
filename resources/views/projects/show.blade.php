@@ -572,7 +572,7 @@
     </div>
 
 
-    
+
 {{--    <div class="card" id="email-notification">--}}
 {{--        <div class="card-header">--}}
 {{--            <h5>{{ __('Email Notification') }}</h5>--}}
